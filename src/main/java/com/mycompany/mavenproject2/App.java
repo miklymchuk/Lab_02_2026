@@ -30,7 +30,11 @@ public class App extends Application {
         root.setTop(game);
         root.setBottom(wait);
         root.setCenter(middle);
-        
+        Random random = new Random();
+        int a = 101 + random.nextInt(19);
+        var image = new Image("file:src/main/java/" + a + ".jpg");
+        lblimage.setGraphic(new ImageView(image));
+        middle.getChildren().add(lblimage);
         var scene = new Scene(root, 250, 300);
         stage.setScene(scene);
         stage.setTitle("Java Games");
@@ -39,8 +43,6 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
-        
- 
     }
 
 }
