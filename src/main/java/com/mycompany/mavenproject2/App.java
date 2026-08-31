@@ -13,6 +13,7 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import java.util.Random;
 
 /**
  * JavaFX App
@@ -24,6 +25,11 @@ public class App extends Application {
         var root = new BorderPane();
         var game = new Label("Random Game");
         var wait = new Label("Waiting...");
+        var lblimage = new Label();
+        var middle = new StackPane();
+        root.setTop(game);
+        root.setBottom(wait);
+        root.setCenter(middle);
         
         var scene = new Scene(root, 250, 300);
         stage.setScene(scene);
@@ -33,6 +39,8 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+        
+ 
     }
 
 }
